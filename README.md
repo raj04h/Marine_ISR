@@ -35,4 +35,16 @@ Detection Workflow
 * Temporal Analytics: Plans to implement multi-temporal change detection for vessel trajectory estimation and behavioral anomaly modeling.
 * Environmental Robustness: Further training is required for extremely high sea clutter and heavy storm conditions.
 
+
+<img width="1035" height="518" alt="image" src="https://github.com/user-attachments/assets/33f512b7-cfe4-4ca4-8102-c832612f0ae9" />
+
+<img width="454" height="419" alt="image" src="https://github.com/user-attachments/assets/8251bd9c-4c6e-4a85-bea5-8b774de291fb" />
+
+<img width="729" height="344" alt="image" src="https://github.com/user-attachments/assets/460cd547-d83c-477c-a96d-4706b732079c" />
+<img width="591" height="375" alt="image" src="https://github.com/user-attachments/assets/82c8b4e4-dc65-455a-9b3b-f2e99e4ea8bf" />
+<img width="414" height="375" alt="image" src="https://github.com/user-attachments/assets/2022ea66-f2e5-4977-abac-45c1d532484a" />
+
+
+
+
 # Author: Himanshu Raj
