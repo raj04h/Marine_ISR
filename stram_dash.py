@@ -5,26 +5,30 @@ import base64
 import numpy as np
 import cv2
 
+# "wide" layout uses full browser width.
 st.set_page_config(layout="wide")
 
 st.title("🛰 Marine AI Guard")
-st.subheader("On-Orbit Ship Detection & Bandwidth Optimization Simulator")
+st.subheader("On-Orbit Marine Activity Detector")
 
 st.markdown("---")
 
 uploaded_file = st.file_uploader(
-    "Upload SAR Satellite Image",
+    "Upload SAR Image",
     type=["jpg", "png", "jpeg"]
 )
 
+# Main Logic Executes Only If File Is Uploaded
 if uploaded_file is not None:
 
+    # seperating Screen into 2 parts by column.
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("Raw Satellite Image")
+        st.subheader("Raw Image") # reading input image
         st.image(uploaded_file, use_column_width=True)
 
+    # Send Image to Backend (FastAPI)
     try:
         files = {"file": uploaded_file.getvalue()}
         response = requests.post("http://127.0.0.1:8000/detect/", files=files)
@@ -44,8 +48,11 @@ if uploaded_file is not None:
             st.markdown("---")
             st.subheader("Edge Inference Metrics")
 
+            # Display Performance Metrics
             m1, m2, m3 = st.columns(3)
 
+
+            # Metrics visualize
             m1.metric("Inference Time (ms)", result["inference_time_ms"])
             m2.metric("Raw Image Size (MB)", result["raw_image_MB"])
             m3.metric("Bandwidth Saved (%)", result["bandwidth_saved_percent"])
@@ -56,6 +63,7 @@ if uploaded_file is not None:
             raw_size = result["raw_image_MB"]
             metadata_size = result["metadata_KB"] / 1024
 
+            # Create Bar Chart
             fig = plt.figure()
             plt.bar(
                 ["Raw Image (MB)", "Metadata (MB)"],
@@ -70,8 +78,10 @@ if uploaded_file is not None:
             st.json(result["detections"])
 
         else:
+            # Backend responded but returned error
             st.error("Detection failed. Check backend server.")
 
+    # Backend unreachable or network issue
     except Exception:
         st.error("Cannot connect to backend.")
-        st.write("Ensure FastAPI is running at http://127.0.0.1:8000")
+        st.write("Ensure Server is running at http://127.0.0.1:8000")
