@@ -5,6 +5,10 @@ import base64
 import numpy as np
 import cv2
 
+# D:/Program_file/Anaconda/Scripts/activate
+# conda activate MyEnv
+# Anaconda/envs/MyEnv/python.exe -m streamlit run d:/Deep_Project/Marine_ISR/stram_dash.py
+
 # "wide" layout uses full browser width.
 st.set_page_config(layout="wide")
 
