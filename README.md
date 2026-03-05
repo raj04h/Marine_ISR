@@ -63,7 +63,5 @@ Predicted Result
 <img width="414" height="375" alt="image" src="https://github.com/user-attachments/assets/2022ea66-f2e5-4977-abac-45c1d532484a" />
 
 
-
-© 2026 Your Name. All rights reserved.
-
 # Author: Himanshu Raj
+© 2026, All rights reserved.
