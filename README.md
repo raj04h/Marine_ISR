@@ -1,8 +1,9 @@
 # Maritime Surveillance Platform: AI-Enabled ISR System
 
-Streamlite Frontend
+## Working Demo Video
+[![Watch the video](https://img.youtube.com/vi/XuEhmXikd80/0.jpg)](https://youtu.be/XuEhmXikd80)
 
-<img width="951" height="499" alt="image" src="https://github.com/user-attachments/assets/faf32686-f4d6-4e56-8d0f-cf74dc814dbc" />
+
 
 
 
